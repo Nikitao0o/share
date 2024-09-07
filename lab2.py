@@ -4,15 +4,15 @@
 def greet(name):
     """Выводит приветственное сообщение для переданного имени"""
     print("Hello, ", name, "!", sep="")
-#greet(input())
+
 def square(number):
     """Возвращает квадрат от переданного числа"""
     return number*number
-#print(square(int(input())))
+
 def max_of_two(x ,y):
     """ Возвращает большее из переданных чисел"""
     return max(x,y)
-#print(max_of_two(int(input(), int(input()))))
+
 
 #Задание 2
 
@@ -25,7 +25,6 @@ def describe_person(name, age=30):
         gl = "лет"
     print("Ваш возраст:", age, gl)
 
-#describe_person(input(), int(input()))
 
 import math
 def is_prime(number):
@@ -36,4 +35,12 @@ def is_prime(number):
         if number%i == 0:
             return False
     return True
-#print(is_prime(int(input())))
+
+
+if __name__ == '__main__':
+    greet(input("Введите имя: "))
+    print("Квадрат равен: ", square(int(input("Число: "))))
+    print("Большее число: ", max_of_two(int(input("Число 1: ")), int(input("Число 2: "))))
+    describe_person(input("Ваше имя: "), int(input("Ваш возраст: "))) #Нужен ввод возраста
+    describe_person(input("Ваше имя: "))    #возраст не запрашивается
+    print(is_prime(int(input("(Тест простоты) Ваше число: "))))

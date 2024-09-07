@@ -1,5 +1,3 @@
-
-
 def task1():
     for i in range(1, int(input("Введите число: "))+1):
         print(i)
@@ -16,7 +14,7 @@ def task2v2():
         print("Большее число:", b)
     else:
         print("Введенные числа равны\n", a, "=", b, sep="")
-
-#task1()
-#task2()
-#task2v2()
+if __name__ == '__main__':
+    task1()
+    task2()
+    task2v2()
